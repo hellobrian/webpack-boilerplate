@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "start": "webpack-dev-server --content-base build"
   },
   "keywords": [],
   "author": "Brian Han <thisisbrianhan@gmail.com> (http://brianhanio.mybluemix.net/)",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "1.13.1"
+    "webpack": "1.13.1",
+    "webpack-dev-server": "1.14.1"
   }
 }
