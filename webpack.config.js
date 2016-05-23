@@ -36,7 +36,7 @@ const common = {
 
 // Default configuration. We will return this if
 // Webpack is called outside of npm.
-if(TARGET === 'start' || !TARGET) {
+if(TARGET === 'dev' || !TARGET) {
   module.exports = merge(common, {
     devServer: {
       contentBase: PATHS.build,
@@ -64,7 +64,15 @@ if(TARGET === 'start' || !TARGET) {
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin()
-    ]
+    ],
+    module: {
+      loaders: [
+        {
+          test: /\.scss$/,
+          loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
+        }
+      ]
+    }
   });
 }
 
