@@ -69,7 +69,8 @@ if(TARGET === 'dev' || !TARGET) {
       loaders: [
         {
           test: /\.scss$/,
-          loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
+          loaders: ['style', 'css?sourceMap', 'sass?sourceMap'],
+          include: PATHS.app
         }
       ]
     }
