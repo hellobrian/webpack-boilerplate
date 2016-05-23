@@ -1,3 +1,8 @@
-var component = require('./component');
+// React
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-document.body.appendChild(component());
+// Components
+import HelloWorld from './hello-world';
+
+ReactDOM.render(<HelloWorld />, document.getElementById('app'));
