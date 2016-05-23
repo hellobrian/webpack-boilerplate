@@ -1,11 +1,4 @@
-// module.exports = function () {
-//   var element = document.createElement('h1');
-//
-//   element.innerHTML = 'Hello world, this is brian han!!';
-//
-//   return element;
-// };
-require('./styles.scss');
+import './styles.scss';
 
 import React from 'react';
 
